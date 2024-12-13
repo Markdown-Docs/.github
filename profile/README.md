@@ -7,22 +7,23 @@ A powerful, real-time collaborative Markdown editor inspired by Google Docs and 
 ## **Key Features** 🌟
 
 - **Real-Time Collaboration**:  
-  Edit Markdown documents with your team simultaneously. See cursors and edits in real-time.  
+- [x] Edit Markdown documents with your team simultaneously. See edits in real-time near instantly!
 
 - **Custom `.mds` Format**:  
   Extend Markdown with powerful features:
-  - `!title[Your Title]`: Add beautiful document titles.  
-  - `!gif[search term]`: Embed GIFs on the fly.  
-  - `!image[unsplash term]`: Seamlessly add images from Unsplash.  
+  - [x] `!![Your Title]`: Add beautiful document titles.  
+  - [ ] WIP:
+    - [ ] `!gif[search term]`: Embed GIFs on the fly.  
+    - [ ] `!image[unsplash term]`: Seamlessly add images from Unsplash.  
 
 - **Live Preview**:  
-  Instantly preview Markdown-rendered content as you type.
+- [x] Instantly preview Markdown-rendered content as you type.
 
 - **Unsplash Integration**:  
-  Quickly embed stunning, royalty-free images.
+- [ ] Quickly embed stunning, royalty-free images.
 
 - **History Tracking**:  
-  Built-in undo/redo functionality.
+- [ ] Built-in undo/redo functionality.
 
 ---
 
@@ -30,10 +31,10 @@ A powerful, real-time collaborative Markdown editor inspired by Google Docs and 
 
 | **Component**   | **Technology**                           |
 |------------------|------------------------------------------|
-| **Frontend**     | [React](https://reactjs.org/), [CodeMirror](https://codemirror.net/), [react-markdown](https://github.com/remarkjs/react-markdown) |
-| **Backend**      | [Phoenix Framework](https://www.phoenixframework.org/) |
+| **Frontend**     | [React](https://reactjs.org/), [CodeMirror](https://codemirror.net/), [react-markdown](https://github.com/remarkjs/react-markdown), [phoenix](https://www.npmjs.com/package/phoenix) |
+| **Backend**      | [Elixir](https://elixir-lang.org/) + [Phoenix Framework](https://www.phoenixframework.org/) |
 | **Parser**       | [Haskell](https://www.haskell.org/) + [Pandoc](https://pandoc.org/) |
-| **Database**     | PostgreSQL                              |
+| **Database, ORM**     | [PostgreSQL](https://www.postgresql.org/), [Ecto](https://github.com/elixir-ecto/ecto)                              |
 | **APIs**         | [Unsplash API](https://unsplash.com/developers) |
 
 ---
@@ -57,34 +58,24 @@ A powerful, real-time collaborative Markdown editor inspired by Google Docs and 
   !image[forest]
   ```
 
-### 3. **Keyboard Shortcuts**
-- `Ctrl + Z`: Undo  
-- `Ctrl + Y`: Redo  
-- `Ctrl + S`: Save Document  
-
 ---
 
 ## **Project Structure** 📂
 
 ```plaintext
 markdown-docs/
-├── frontend/        # React frontend
-├── backend/         # Phoenix backend
-├── parser/          # Haskell-based .mds parser
-└── docs/            # Project documentation
+├── msd-frontend/        # React frontend
+├── mds-backend/         # Elixir Phoenix backend
+├── mds-parser/          # Haskell-based .mds parser
+└── mds-docs/            # Project documentation
 ```
 
 ---
 
 ## **Contributing** 🤝
 
-We welcome contributions! Follow these steps to get started:  
-
-1. Fork the repository.  
-2. Create a feature branch (`git checkout -b feature/awesome-feature`).  
-3. Commit your changes (`git commit -m "Add awesome feature"`).  
-4. Push to the branch (`git push origin feature/awesome-feature`).  
-5. Open a pull request.
+We're welcome to contributions! But only in the form of requested features in the form of 'issues' 👼  
+Feel free to request any feature you won't in the `mds-backend`, `mds-frontend` or `mds-parser` repos
 
 ---
 
@@ -92,9 +83,12 @@ We welcome contributions! Follow these steps to get started:
 
 - [x] Basic Markdown editor with live preview.  
 - [x] Real-time collaboration with WebSocket support.  
-- [x] Custom `.mds` parser in Haskell.  
-- [x] Unsplash API integration.  
-- [ ] Export to PDF.  
+- [x] Custom `.mds` parser in Haskell.
+- [x] File storage on backend
+- [x] Rest API for downloading / loading files
+- [ ] Haskell Parser integration & separate sockets for preview & context 
+- [ ] Unsplash API integration.  
+- [ ] Export to PDF.
 - [ ] Mobile-friendly UI.  
 
 ---
@@ -107,10 +101,10 @@ This project is licensed under the [Apache License 2.0](LICENSE).
 
 ## **Contributors** ✨
 
-- **[Your Name](https://github.com/your-profile)**  
-- **[Contributor 2](https://github.com/contributor2)**  
-- **[Contributor 3](https://github.com/contributor3)**  
-- **[Contributor 4](https://github.com/contributor4)**  
+- **[Boris Dvorkin](https://github.com/worthant)**: Lead Developer, DevOps Engineer, Fullstack Engineer (Elixir and React)  
+- **[Alexander Razinkin](https://github.com/DecafMangoITMO)**: Fullstack Engineer (Elixir and React)  
+- **[Roman Kobelev](https://github.com/Romariok)**: Fullstack Engineer (Elixir and React)  
+- **[Artem Sorokin](https://github.com/ta4ilka69)**: Software Engineer (Haskell)
 
 ---
 
