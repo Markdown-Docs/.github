@@ -139,7 +139,7 @@ This project is licensed under the [Apache License 2.0](LICENSE).
 - **[Boris Dvorkin](https://github.com/worthant)**: Lead Developer, DevOps Engineer, Fullstack Engineer (Elixir and React)  
 - **[Alexander Razinkin](https://github.com/DecafMangoITMO)**: Fullstack Engineer (Elixir and React)  
 - **[Roman Kobelev](https://github.com/Romariok)**: Fullstack Engineer (Elixir and React)  
-- **[Artem Sorokin](https://github.com/ta4ilka69)**: Software Engineer (Haskell)
+- **[Artem Balin](https://github.com/ta4ilka69)**: Software Engineer (Haskell)
 
 ---
 
