@@ -4,6 +4,12 @@ A powerful, real-time collaborative Markdown editor inspired by Google Docs and 
 
 ---
 
+### **Demo Preview** 🎥
+
+https://github.com/user-attachments/assets/79bc1bef-a84f-4baa-a86f-b2fb396f7586
+
+
+
 ## **Key Features** 🌟
 
 - **Real-Time Collaboration**:  
@@ -70,6 +76,35 @@ markdown-docs/
 └── mds-docs/            # Project documentation
 ```
 
+```mermaid
+graph TD
+    subgraph MDS-Converter
+        A[mds-converter]
+    end
+
+    subgraph MDS-Backend
+        B[mds-backend]
+    end
+
+    subgraph Database
+        D[(PostgreSQL)]
+    end
+
+    subgraph MDS-Frontend
+        C[mds-frontend]
+    end
+
+    %% Supervisor relationship between MDS-Converter and MDS-Backend
+    A <-->|Supervisor| B
+
+    %% Ecto relationship between MDS-Backend and PostgreSQL
+    B <-->|Ecto| D
+
+    %% WebSocket relationship between MDS-Backend and MDS-Frontend
+    B<-. Preview Channel .->C
+    B<-. File Channel .->C
+```
+
 ---
 
 ## **Contributing** 🤝
@@ -86,7 +121,7 @@ Feel free to request any feature you won't in the `mds-backend`, `mds-frontend` 
 - [x] Custom `.mds` parser in Haskell.
 - [x] File storage on backend
 - [x] Rest API for downloading / loading files
-- [ ] Haskell Parser integration & separate sockets for preview & context 
+- [x] Haskell Parser integration & separate sockets for preview & context 
 - [ ] Unsplash API integration.  
 - [ ] Export to PDF.
 - [ ] Mobile-friendly UI.  
@@ -107,9 +142,5 @@ This project is licensed under the [Apache License 2.0](LICENSE).
 - **[Artem Sorokin](https://github.com/ta4ilka69)**: Software Engineer (Haskell)
 
 ---
-
-### **Demo Preview** 🎥
-
-*Coming soon...*
 
 For questions or feedback, feel free to [open an issue](https://github.com/Imtjl/markdown-docs/issues).  
